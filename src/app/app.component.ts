@@ -2,9 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './html/app.component.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'bytebank';
+  destino: number;
+  valor: number;
+  transferencia: any
+
+  transferir($event: any){
+    console.log($event)
+    this.transferencia = $event;
+
+  }
 }
